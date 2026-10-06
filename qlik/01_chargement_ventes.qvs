@@ -1,9 +1,9 @@
-// BI Agent Investigator — etape 1 : ventes uniquement.
+// BI Agent Investigator — point d'entree : ventes, dimensions et retours.
 // Donnees fictives. Etape ventes validee dans Qlik le 06/10/2026.
-// Etape dimensions ajoutee ensuite : rechargement utilisateur a valider.
+// Dimensions validees dans Qlik le 06/10/2026. Retours a valider.
 // Remplacer le bloc VENTES existant ; ne pas l'ajouter une deuxieme fois.
 // Connexions Dossier requises : BI_AGENT_DATA et BI_AGENT_SCRIPTS.
-// Dimensions incluses en fin de script. Retours et objectifs a venir.
+// Dimensions et retours inclus en fin de script. Objectifs et calendrier a venir.
 
 SET DecimalSep='.';
 SET ThousandSep=' ';
@@ -92,3 +92,6 @@ TRACE VENTES : $(vLignesBrutes) lignes source | $(vLignesUniques) conservees | $
 
 // Etape 2 : dimensions, executees une seule fois apres les ventes.
 $(Must_Include=lib://BI_AGENT_SCRIPTS/02_chargement_dimensions.qvs);
+
+// Etape 3 : retours, lies aux ventes par LigneID.
+$(Must_Include=lib://BI_AGENT_SCRIPTS/03_chargement_retours.qvs);
