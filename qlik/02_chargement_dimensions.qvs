@@ -1,0 +1,51 @@
+// BI Agent Investigator — dimensions de l'etape 2.
+// Donnees fictives. Connexion Dossier BI_AGENT_DATA requise.
+// Appele automatiquement par 01_chargement_ventes.qvs.
+// Ne pas inclure ce fichier une seconde fois dans l'application.
+// Chaque dimension partage UNE cle avec VENTES, sans jointure multiplicative.
+
+PRODUITS:
+LOAD
+    Text(ProduitID) as ProduitID,
+    Produit,
+    Categorie
+FROM [lib://BI_AGENT_DATA/produits.csv]
+(txt, utf8, embedded labels, delimiter is ';');
+
+CLIENTS:
+LOAD
+    Text(ClientID) as ClientID,
+    Client,
+    Segment,
+    Ville,
+    Date(Date#(DateEntreeRelation, 'YYYY-MM-DD')) as DateEntreeRelation,
+    Date(Date#(DatePremiereCommande, 'YYYY-MM-DD')) as DatePremiereCommande
+FROM [lib://BI_AGENT_DATA/clients.csv]
+(txt, utf8, embedded labels, delimiter is ';');
+
+COMMERCIAUX:
+LOAD
+    Text(CommercialID) as CommercialID,
+    Commercial,
+    Equipe
+FROM [lib://BI_AGENT_DATA/commerciaux.csv]
+(txt, utf8, embedded labels, delimiter is ';');
+
+// Membre technique : conserver les ventes sans commercial dans les analyses.
+// Ce membre n'est pas un neuvieme commercial reel.
+Concatenate (COMMERCIAUX)
+LOAD
+    'NON_RENSEIGNE' as CommercialID,
+    'Commercial non renseigne' as Commercial,
+    'Non renseignee' as Equipe
+AutoGenerate 1;
+
+LET vNbProduits = NoOfRows('PRODUITS');
+LET vNbClients = NoOfRows('CLIENTS');
+LET vNbCommerciaux = NoOfRows('COMMERCIAUX');
+
+TRACE DIMENSIONS : $(vNbProduits) produits | $(vNbClients) clients | $(vNbCommerciaux) membres commerciaux;
+
+// Attendus v1 : 40 produits, 500 clients, 9 membres commerciaux
+// (8 commerciaux et 1 membre non renseigne).
+// Les retours, objectifs et calendrier ne sont pas encore charges.
