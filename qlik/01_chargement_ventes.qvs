@@ -1,8 +1,9 @@
 // BI Agent Investigator — etape 1 : ventes uniquement.
-// Donnees fictives. Non execute dans Qlik a ce stade.
+// Donnees fictives. Etape ventes validee dans Qlik le 06/10/2026.
+// Etape dimensions ajoutee ensuite : rechargement utilisateur a valider.
 // Remplacer le bloc VENTES existant ; ne pas l'ajouter une deuxieme fois.
-// Connexion Web requise : GITHUB_BI_AGENT_VENTES.
-// Les autres tables (retours, objectifs, dimensions) seront ajoutees ensuite.
+// Connexions Dossier requises : BI_AGENT_DATA et BI_AGENT_SCRIPTS.
+// Dimensions incluses en fin de script. Retours et objectifs a venir.
 
 SET DecimalSep='.';
 SET ThousandSep=' ';
@@ -15,7 +16,7 @@ LOAD
     LigneID, CommandeID, DateVente, ClientID, ProduitID,
     CommercialID, Canal, Devise, Quantite, PrixCatalogueHT,
     RemiseHT, CoutUnitaireHistoriqueHT, CAFactureHT, CoutVenduHT
-FROM [lib://GITHUB_BI_AGENT_VENTES]
+FROM [lib://BI_AGENT_DATA/ventes.csv]
 (txt, utf8, embedded labels, delimiter is ';');
 
 LET vLignesBrutes = NoOfRows('VENTES_BRUTES');
@@ -88,3 +89,6 @@ TRACE VENTES : $(vLignesBrutes) lignes source | $(vLignesUniques) conservees | $
 // 0 collision restante et 0 date invalide.
 // Important : Sum ignore les NULL. Une somme de marges connues n'est
 // PAS la marge totale. Aucune marge totale n'est publiee a cette etape.
+
+// Etape 2 : dimensions, executees une seule fois apres les ventes.
+$(Must_Include=lib://BI_AGENT_SCRIPTS/02_chargement_dimensions.qvs);
