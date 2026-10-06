@@ -1,0 +1,122 @@
+// Etape 4 — table de faits commune et calendrier.
+// Donnees fictives. Charger apres 01, 02 et 03, une seule fois.
+// Une ligne = une vente OU un retour OU un objectif mensuel.
+// Les objectifs ne sont jamais joints a chaque vente.
+
+// Recuperer les axes de la vente d'origine pour chaque retour.
+MAP_RETOUR_PRODUIT:
+Mapping LOAD LigneID, ProduitID RESIDENT VENTES;
+MAP_RETOUR_CLIENT:
+Mapping LOAD LigneID, ClientID RESIDENT VENTES;
+MAP_RETOUR_COMMERCIAL:
+Mapping LOAD LigneID, CommercialID RESIDENT VENTES;
+MAP_RETOUR_CANAL:
+Mapping LOAD LigneID, Canal RESIDENT VENTES;
+MAP_RETOUR_COMMANDE:
+Mapping LOAD LigneID, CommandeID RESIDENT VENTES;
+MAP_RETOUR_DATEVENTE:
+Mapping LOAD LigneID, DateVente RESIDENT VENTES;
+
+FAITS_COMMERCIAUX:
+NoConcatenate
+LOAD
+    *,
+    'VENTE|' & LigneID as FluxID,
+    'VENTE' as TypeFlux,
+    DateVente as DateAnalyse,
+    CAFactureHT as CAFluxHT,
+    CoutVenduHT as CoutFluxHT,
+    FlagCoutManquant as FlagCoutFluxInconnu
+RESIDENT VENTES;
+
+Concatenate (FAITS_COMMERCIAUX)
+LOAD
+    RetourID,
+    LigneID,
+    'RETOUR|' & RetourID as FluxID,
+    'RETOUR' as TypeFlux,
+    DateRetour as DateAnalyse,
+    DateRetour,
+    Date(ApplyMap('MAP_RETOUR_DATEVENTE', LigneID, Null())) as DateVente,
+    ApplyMap('MAP_RETOUR_PRODUIT', LigneID, 'INCONNU') as ProduitID,
+    ApplyMap('MAP_RETOUR_CLIENT', LigneID, 'INCONNU') as ClientID,
+    ApplyMap('MAP_RETOUR_COMMERCIAL', LigneID, 'NON_RENSEIGNE') as CommercialID,
+    ApplyMap('MAP_RETOUR_CANAL', LigneID, 'INCONNU') as Canal,
+    ApplyMap('MAP_RETOUR_COMMANDE', LigneID, 'INCONNU') as CommandeID,
+    'EUR' as Devise,
+    QuantiteRetournee,
+    RemboursementHT,
+    CoutRecupereHT,
+    -RemboursementHT as CAFluxHT,
+    -CoutRecupereHT as CoutFluxHT,
+    If(IsNull(CoutRecupereHT), 1, 0) as FlagCoutFluxInconnu,
+    FlagRetourOrphelin
+RESIDENT RETOURS;
+
+// Les faits contiennent maintenant les donnees sources et leurs identifiants.
+// Supprimer les tables de travail pour eviter plusieurs chemins associatifs.
+DROP TABLE VENTES;
+DROP TABLE RETOURS;
+
+OBJECTIFS_SOURCE:
+LOAD
+    Mois as MoisObjectif,
+    Text(CommercialID) as CommercialID,
+    Num#(ObjectifCAHT, '0.00', '.', ' ') as ObjectifCAHT,
+    Num#(ObjectifMargeBrute, '0.00', '.', ' ') as ObjectifMargeBrute
+FROM [lib://BI_AGENT_DATA/objectifs.csv]
+(txt, utf8, embedded labels, delimiter is ';');
+
+LET vNbObjectifs = NoOfRows('OBJECTIFS_SOURCE');
+
+Concatenate (FAITS_COMMERCIAUX)
+LOAD
+    'OBJECTIF|' & MoisObjectif & '|' & CommercialID as FluxID,
+    'OBJECTIF' as TypeFlux,
+    Date(Date#(MoisObjectif & '-01', 'YYYY-MM-DD')) as DateAnalyse,
+    CommercialID,
+    'EUR' as Devise,
+    ObjectifCAHT,
+    ObjectifMargeBrute
+RESIDENT OBJECTIFS_SOURCE;
+
+DROP TABLE OBJECTIFS_SOURCE;
+
+// Un calendrier, une seule cle : DateAnalyse.
+// Vente au jour de vente, remboursement au jour de retour.
+// Objectif porte au 1er du mois : comparer UNIQUEMENT des mois complets.
+CALENDRIER:
+LOAD
+    Date(Date#([Date], 'YYYY-MM-DD')) as DateAnalyse,
+    Mois as MoisAnalyse,
+    Num#(Annee, '0') as AnneeAnalyse,
+    Num#(Trimestre, '0') as TrimestreAnalyse,
+    Num#(MoisComplet, '0') as MoisCompletAnalyse
+FROM [lib://BI_AGENT_DATA/calendrier.csv]
+(txt, utf8, embedded labels, delimiter is ';');
+
+MAP_DATES_ANALYSE:
+Mapping LOAD DateAnalyse, 1 RESIDENT CALENDRIER;
+
+AUDIT_MODELE:
+LOAD
+    Count(FluxID) as AuditModele_Flux,
+    Count(DISTINCT FluxID) as AuditModele_FluxDistincts,
+    Sum(If(TypeFlux='VENTE', 1, 0)) as AuditModele_Ventes,
+    Sum(If(TypeFlux='RETOUR', 1, 0)) as AuditModele_Retours,
+    Sum(If(TypeFlux='OBJECTIF', 1, 0)) as AuditModele_Objectifs,
+    Sum(If(ApplyMap('MAP_DATES_ANALYSE', DateAnalyse, 0)=0, 1, 0))
+        as AuditModele_DatesHorsCalendrier,
+    Sum(FlagCoutFluxInconnu) as AuditModele_FluxCoutInconnu
+RESIDENT FAITS_COMMERCIAUX;
+
+LET vNbFlux = NoOfRows('FAITS_COMMERCIAUX');
+LET vNbJours = NoOfRows('CALENDRIER');
+LET vDatesHorsCalendrier = Peek('AuditModele_DatesHorsCalendrier', 0, 'AUDIT_MODELE');
+TRACE MODELE : $(vNbFlux) flux | $(vNbObjectifs) objectifs | $(vNbJours) jours | $(vDatesHorsCalendrier) dates hors calendrier;
+
+// Lire docs/MODELE_QLIK.md avant de publier les KPI.
+// Les objectifs existent au grain mois/commercial uniquement.
+// Une selection produit/client/canal ne possede pas d'objectif attribue.
+// Count(CommandeID) est incorrect : compter les commandes DISTINCTES,
+// en limitant TypeFlux a VENTE.
