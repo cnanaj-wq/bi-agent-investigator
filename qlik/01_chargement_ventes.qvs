@@ -81,7 +81,7 @@ LOAD
     Sum(FlagDateInvalide) as Audit_DatesInvalides
 RESIDENT VENTES;
 
-TRACE VENTES : $(vLignesBrutes) lignes source ; $(vLignesUniques) conservees ; $(vDoublonsExacts) doublons exacts retires;
+TRACE VENTES : $(vLignesBrutes) lignes source | $(vLignesUniques) conservees | $(vDoublonsExacts) doublons exacts retires;
 
 // Attendus pour le jeu v1 : 15001 source, 15000 conservees, 1 doublon,
 // 7500 commandes, 72 couts absents, 790 commerciaux absents,
