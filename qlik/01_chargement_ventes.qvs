@@ -1,9 +1,10 @@
-// BI Agent Investigator — point d'entree : ventes, dimensions et retours.
+// BI Agent Investigator — point d'entree complet du modele commercial.
 // Donnees fictives. Etape ventes validee dans Qlik le 06/10/2026.
-// Dimensions validees dans Qlik le 06/10/2026. Retours a valider.
+// Ventes, dimensions et retours valides dans Qlik le 06/10/2026.
+// Consolidation, objectifs et calendrier : rechargement utilisateur a valider.
 // Remplacer le bloc VENTES existant ; ne pas l'ajouter une deuxieme fois.
 // Connexions Dossier requises : BI_AGENT_DATA et BI_AGENT_SCRIPTS.
-// Dimensions et retours inclus en fin de script. Objectifs et calendrier a venir.
+// Etapes 02, 03 et 04 incluses en fin de script : ne pas les inclure ailleurs.
 
 SET DecimalSep='.';
 SET ThousandSep=' ';
@@ -95,3 +96,6 @@ $(Must_Include=lib://BI_AGENT_SCRIPTS/02_chargement_dimensions.qvs);
 
 // Etape 3 : retours, lies aux ventes par LigneID.
 $(Must_Include=lib://BI_AGENT_SCRIPTS/03_chargement_retours.qvs);
+
+// Etape 4 : faits commerciaux, objectifs et calendrier commun.
+$(Must_Include=lib://BI_AGENT_SCRIPTS/04_modele_calendrier_objectifs.qvs);
