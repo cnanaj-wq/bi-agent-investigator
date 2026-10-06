@@ -1,0 +1,46 @@
+// BI Agent Investigator — etape 3 : retours.
+// Donnees fictives. Execute apres les ventes et dimensions.
+// Ne pas inclure une seconde fois dans l'application.
+// Une seule cle partagee avec VENTES : LigneID.
+// DateRetour reste distincte de DateVente : retour != nouvelle vente.
+
+MAP_LIGNES_VENTE:
+Mapping LOAD LigneID, 1 RESIDENT VENTES;
+
+RETOURS:
+LOAD
+    *,
+    If(ApplyMap('MAP_LIGNES_VENTE', LigneID, 0)=0,
+        1, 0) as FlagRetourOrphelin;
+LOAD
+    Text(RetourID) as RetourID,
+    Text(LigneID) as LigneID,
+    Date(Date#(DateRetour, 'YYYY-MM-DD')) as DateRetour,
+    Num#(QuantiteRetournee, '0', '.', ' ') as QuantiteRetournee,
+    Num#(RemboursementHT, '0.00', '.', ' ') as RemboursementHT,
+    If(Len(Trim(CoutRecupereHT))>0,
+        Num#(CoutRecupereHT, '0.00', '.', ' '),
+        Null()) as CoutRecupereHT
+FROM [lib://BI_AGENT_DATA/retours.csv]
+(txt, utf8, embedded labels, delimiter is ';');
+
+AUDIT_RETOURS:
+LOAD
+    Count(RetourID) as AuditRetours_Lignes,
+    Count(DISTINCT RetourID) as AuditRetours_IDDistincts,
+    Count(RetourID)-Count(DISTINCT RetourID) as AuditRetours_IDRepetes,
+    Sum(FlagRetourOrphelin) as AuditRetours_Orphelins,
+    Sum(If(IsNull(DateRetour), 1, 0)) as AuditRetours_DatesInvalides,
+    Sum(If(IsNull(CoutRecupereHT), 1, 0)) as AuditRetours_CoutsAbsents
+RESIDENT RETOURS;
+
+LET vNbRetours = NoOfRows('RETOURS');
+LET vRetoursOrphelins = Peek('AuditRetours_Orphelins', 0, 'AUDIT_RETOURS');
+TRACE RETOURS : $(vNbRetours) lignes | $(vRetoursOrphelins) orphelins;
+
+// Attendus v1 : 371 retours, 0 orphelin, aucun ID repete.
+// ATTENTION aux futurs KPI par periode : une selection sur DateVente
+// selectionne une cohorte de ventes et ses retours, pas les remboursements
+// intervenus pendant cette periode. Le calendrier et les expressions de
+// flux a date de retour seront traites avant de publier le CA net mensuel.
+// Pas de jointure des retours dans VENTES : evite de multiplier les ventes.
