@@ -1,0 +1,501 @@
+﻿ClientID;Client;Segment;Ville;DateEntreeRelation;DatePremiereCommande
+C0001;Client fictif 0001;PME;Lyon;2023-10-01;2023-10-16
+C0002;Client fictif 0002;Grand compte;Bordeaux;2023-10-01;2023-10-08
+C0003;Client fictif 0003;TPE;Lille;2023-10-01;2023-10-16
+C0004;Client fictif 0004;PME;Nantes;2023-10-01;2023-10-31
+C0005;Client fictif 0005;Grand compte;Toulouse;2023-10-01;2023-10-16
+C0006;Client fictif 0006;TPE;Paris;2023-10-01;2023-10-30
+C0007;Client fictif 0007;PME;Lyon;2023-10-01;2023-10-16
+C0008;Client fictif 0008;Grand compte;Bordeaux;2023-10-01;2023-10-04
+C0009;Client fictif 0009;TPE;Lille;2023-10-01;2023-10-24
+C0010;Client fictif 0010;PME;Nantes;2023-10-01;2023-10-29
+C0011;Client fictif 0011;Grand compte;Toulouse;2023-10-01;2023-10-03
+C0012;Client fictif 0012;TPE;Paris;2023-10-01;2023-10-12
+C0013;Client fictif 0013;PME;Lyon;2023-10-01;2023-10-13
+C0014;Client fictif 0014;Grand compte;Bordeaux;2023-10-01;2023-10-01
+C0015;Client fictif 0015;TPE;Lille;2023-10-01;2023-10-14
+C0016;Client fictif 0016;PME;Nantes;2023-10-01;2023-10-08
+C0017;Client fictif 0017;Grand compte;Toulouse;2023-10-01;2023-10-09
+C0018;Client fictif 0018;TPE;Paris;2023-10-01;2023-10-16
+C0019;Client fictif 0019;PME;Lyon;2023-10-01;2023-10-14
+C0020;Client fictif 0020;Grand compte;Bordeaux;2023-10-01;2023-10-31
+C0021;Client fictif 0021;TPE;Lille;2023-10-01;2023-10-15
+C0022;Client fictif 0022;PME;Nantes;2023-10-01;2023-10-23
+C0023;Client fictif 0023;Grand compte;Toulouse;2023-10-01;2023-10-01
+C0024;Client fictif 0024;TPE;Paris;2023-10-01;2023-10-17
+C0025;Client fictif 0025;PME;Lyon;2023-10-01;2023-10-14
+C0026;Client fictif 0026;Grand compte;Bordeaux;2023-10-01;2023-10-20
+C0027;Client fictif 0027;TPE;Lille;2023-10-01;2023-10-27
+C0028;Client fictif 0028;PME;Nantes;2023-10-01;2023-10-29
+C0029;Client fictif 0029;Grand compte;Toulouse;2023-10-01;2023-10-15
+C0030;Client fictif 0030;TPE;Paris;2023-10-01;2023-10-28
+C0031;Client fictif 0031;PME;Lyon;2023-10-01;2023-10-15
+C0032;Client fictif 0032;Grand compte;Bordeaux;2023-10-01;2023-10-20
+C0033;Client fictif 0033;TPE;Lille;2023-10-01;2023-10-11
+C0034;Client fictif 0034;PME;Nantes;2023-10-01;2023-10-27
+C0035;Client fictif 0035;Grand compte;Toulouse;2023-10-01;2023-10-04
+C0036;Client fictif 0036;TPE;Paris;2023-10-01;2023-10-28
+C0037;Client fictif 0037;PME;Lyon;2023-10-01;2023-10-17
+C0038;Client fictif 0038;Grand compte;Bordeaux;2023-10-01;2023-10-17
+C0039;Client fictif 0039;TPE;Lille;2023-10-01;2023-10-13
+C0040;Client fictif 0040;PME;Nantes;2023-10-01;2023-10-30
+C0041;Client fictif 0041;Grand compte;Toulouse;2023-10-01;2023-10-21
+C0042;Client fictif 0042;TPE;Paris;2023-10-01;2023-10-16
+C0043;Client fictif 0043;PME;Lyon;2023-10-01;2023-10-29
+C0044;Client fictif 0044;Grand compte;Bordeaux;2023-10-01;2023-10-02
+C0045;Client fictif 0045;TPE;Lille;2023-10-01;2023-10-18
+C0046;Client fictif 0046;PME;Nantes;2023-10-01;2023-10-30
+C0047;Client fictif 0047;Grand compte;Toulouse;2023-10-01;2023-10-15
+C0048;Client fictif 0048;TPE;Paris;2023-10-01;2023-10-29
+C0049;Client fictif 0049;PME;Lyon;2023-10-01;2023-10-23
+C0050;Client fictif 0050;Grand compte;Bordeaux;2023-10-01;2023-10-06
+C0051;Client fictif 0051;TPE;Lille;2023-10-01;2023-10-21
+C0052;Client fictif 0052;PME;Nantes;2023-10-01;2023-10-06
+C0053;Client fictif 0053;Grand compte;Toulouse;2023-10-01;2023-10-15
+C0054;Client fictif 0054;TPE;Paris;2023-10-01;2023-10-08
+C0055;Client fictif 0055;PME;Lyon;2023-10-01;2023-10-21
+C0056;Client fictif 0056;Grand compte;Bordeaux;2023-10-01;2023-10-23
+C0057;Client fictif 0057;TPE;Lille;2023-10-01;2023-10-04
+C0058;Client fictif 0058;PME;Nantes;2023-10-01;2023-10-26
+C0059;Client fictif 0059;Grand compte;Toulouse;2023-10-01;2023-10-04
+C0060;Client fictif 0060;TPE;Paris;2023-10-01;2023-10-07
+C0061;Client fictif 0061;PME;Lyon;2023-10-01;2023-10-03
+C0062;Client fictif 0062;Grand compte;Bordeaux;2023-10-01;2023-10-12
+C0063;Client fictif 0063;TPE;Lille;2023-10-01;2023-10-17
+C0064;Client fictif 0064;PME;Nantes;2023-10-01;2023-10-28
+C0065;Client fictif 0065;Grand compte;Toulouse;2023-10-01;2023-10-17
+C0066;Client fictif 0066;TPE;Paris;2023-10-01;2023-10-13
+C0067;Client fictif 0067;PME;Lyon;2023-10-01;2023-10-28
+C0068;Client fictif 0068;Grand compte;Bordeaux;2023-10-01;2023-10-20
+C0069;Client fictif 0069;TPE;Lille;2023-10-01;2023-10-13
+C0070;Client fictif 0070;PME;Nantes;2023-10-01;2023-10-06
+C0071;Client fictif 0071;Grand compte;Toulouse;2023-10-01;2023-10-28
+C0072;Client fictif 0072;TPE;Paris;2023-10-01;2023-10-17
+C0073;Client fictif 0073;PME;Lyon;2023-10-01;2023-10-31
+C0074;Client fictif 0074;Grand compte;Bordeaux;2023-10-01;2023-10-30
+C0075;Client fictif 0075;TPE;Lille;2023-10-01;2023-10-07
+C0076;Client fictif 0076;PME;Nantes;2023-10-01;2023-10-06
+C0077;Client fictif 0077;Grand compte;Toulouse;2023-10-01;2023-10-09
+C0078;Client fictif 0078;TPE;Paris;2023-10-01;2023-10-22
+C0079;Client fictif 0079;PME;Lyon;2023-10-01;2023-10-05
+C0080;Client fictif 0080;Grand compte;Bordeaux;2023-10-01;2023-10-02
+C0081;Client fictif 0081;TPE;Lille;2023-10-01;2023-10-08
+C0082;Client fictif 0082;PME;Nantes;2023-10-01;2023-10-03
+C0083;Client fictif 0083;Grand compte;Toulouse;2023-10-01;2023-10-26
+C0084;Client fictif 0084;TPE;Paris;2023-10-01;2023-10-04
+C0085;Client fictif 0085;PME;Lyon;2023-10-01;2023-10-06
+C0086;Client fictif 0086;Grand compte;Bordeaux;2023-10-01;2023-10-01
+C0087;Client fictif 0087;TPE;Lille;2023-10-01;2023-10-17
+C0088;Client fictif 0088;PME;Nantes;2023-10-01;2023-10-11
+C0089;Client fictif 0089;Grand compte;Toulouse;2023-10-01;2023-10-08
+C0090;Client fictif 0090;TPE;Paris;2023-10-01;2023-10-20
+C0091;Client fictif 0091;PME;Lyon;2023-10-01;2023-10-12
+C0092;Client fictif 0092;Grand compte;Bordeaux;2023-10-01;2023-10-15
+C0093;Client fictif 0093;TPE;Lille;2023-10-01;2023-10-30
+C0094;Client fictif 0094;PME;Nantes;2023-10-01;2023-10-13
+C0095;Client fictif 0095;Grand compte;Toulouse;2023-10-01;2023-10-26
+C0096;Client fictif 0096;TPE;Paris;2023-10-01;2023-10-11
+C0097;Client fictif 0097;PME;Lyon;2023-10-01;2023-10-12
+C0098;Client fictif 0098;Grand compte;Bordeaux;2023-10-01;2023-10-04
+C0099;Client fictif 0099;TPE;Lille;2023-10-01;2023-10-11
+C0100;Client fictif 0100;PME;Nantes;2023-10-01;2023-10-18
+C0101;Client fictif 0101;Grand compte;Toulouse;2023-10-01;2023-10-08
+C0102;Client fictif 0102;TPE;Paris;2023-10-01;2023-10-30
+C0103;Client fictif 0103;PME;Lyon;2023-10-01;2023-10-10
+C0104;Client fictif 0104;Grand compte;Bordeaux;2023-10-01;2023-10-20
+C0105;Client fictif 0105;TPE;Lille;2023-10-01;2023-10-15
+C0106;Client fictif 0106;PME;Nantes;2023-10-01;2023-10-29
+C0107;Client fictif 0107;Grand compte;Toulouse;2023-10-01;2023-10-20
+C0108;Client fictif 0108;TPE;Paris;2023-10-01;2023-10-29
+C0109;Client fictif 0109;PME;Lyon;2023-10-01;2023-10-25
+C0110;Client fictif 0110;Grand compte;Bordeaux;2023-10-01;2023-10-29
+C0111;Client fictif 0111;TPE;Lille;2023-10-01;2023-10-20
+C0112;Client fictif 0112;PME;Nantes;2023-10-01;2023-10-21
+C0113;Client fictif 0113;Grand compte;Toulouse;2023-10-01;2023-10-15
+C0114;Client fictif 0114;TPE;Paris;2023-10-01;2023-10-21
+C0115;Client fictif 0115;PME;Lyon;2023-10-01;2023-10-17
+C0116;Client fictif 0116;Grand compte;Bordeaux;2023-10-01;2023-10-16
+C0117;Client fictif 0117;TPE;Lille;2023-10-01;2023-10-04
+C0118;Client fictif 0118;PME;Nantes;2023-10-01;2023-10-20
+C0119;Client fictif 0119;Grand compte;Toulouse;2023-10-01;2023-10-27
+C0120;Client fictif 0120;TPE;Paris;2023-10-01;2023-10-25
+C0121;Client fictif 0121;PME;Lyon;2023-10-01;2023-10-26
+C0122;Client fictif 0122;Grand compte;Bordeaux;2023-10-01;2023-10-08
+C0123;Client fictif 0123;TPE;Lille;2023-10-01;2023-10-22
+C0124;Client fictif 0124;PME;Nantes;2023-10-01;2023-10-04
+C0125;Client fictif 0125;Grand compte;Toulouse;2023-10-01;2023-10-05
+C0126;Client fictif 0126;TPE;Paris;2023-10-01;2023-10-30
+C0127;Client fictif 0127;PME;Lyon;2023-10-01;2023-10-20
+C0128;Client fictif 0128;Grand compte;Bordeaux;2023-10-01;2023-10-07
+C0129;Client fictif 0129;TPE;Lille;2023-10-01;2023-10-13
+C0130;Client fictif 0130;PME;Nantes;2023-10-01;2023-10-24
+C0131;Client fictif 0131;Grand compte;Toulouse;2023-10-01;2023-10-01
+C0132;Client fictif 0132;TPE;Paris;2023-10-01;2023-10-08
+C0133;Client fictif 0133;PME;Lyon;2023-10-01;2023-10-07
+C0134;Client fictif 0134;Grand compte;Bordeaux;2023-10-01;2023-10-30
+C0135;Client fictif 0135;TPE;Lille;2023-10-01;2023-10-06
+C0136;Client fictif 0136;PME;Nantes;2023-10-01;2023-10-03
+C0137;Client fictif 0137;Grand compte;Toulouse;2023-10-01;2023-10-04
+C0138;Client fictif 0138;TPE;Paris;2023-10-01;2023-10-15
+C0139;Client fictif 0139;PME;Lyon;2023-10-01;2023-10-27
+C0140;Client fictif 0140;Grand compte;Bordeaux;2023-10-01;2023-10-02
+C0141;Client fictif 0141;TPE;Lille;2023-10-01;2023-10-20
+C0142;Client fictif 0142;PME;Nantes;2023-10-01;2023-10-31
+C0143;Client fictif 0143;Grand compte;Toulouse;2023-10-01;2023-10-31
+C0144;Client fictif 0144;TPE;Paris;2023-10-01;2023-10-13
+C0145;Client fictif 0145;PME;Lyon;2023-10-01;2023-10-05
+C0146;Client fictif 0146;Grand compte;Bordeaux;2023-10-01;2023-10-14
+C0147;Client fictif 0147;TPE;Lille;2023-10-01;2023-10-23
+C0148;Client fictif 0148;PME;Nantes;2023-10-01;2023-10-18
+C0149;Client fictif 0149;Grand compte;Toulouse;2023-10-01;2023-10-19
+C0150;Client fictif 0150;TPE;Paris;2023-10-01;2023-10-20
+C0151;Client fictif 0151;PME;Lyon;2023-10-01;2023-10-10
+C0152;Client fictif 0152;Grand compte;Bordeaux;2023-10-01;2023-10-23
+C0153;Client fictif 0153;TPE;Lille;2023-10-01;2023-10-01
+C0154;Client fictif 0154;PME;Nantes;2023-10-01;2023-10-14
+C0155;Client fictif 0155;Grand compte;Toulouse;2023-10-01;2023-10-22
+C0156;Client fictif 0156;TPE;Paris;2023-10-01;2023-10-29
+C0157;Client fictif 0157;PME;Lyon;2023-10-01;2023-10-04
+C0158;Client fictif 0158;Grand compte;Bordeaux;2023-10-01;2023-10-25
+C0159;Client fictif 0159;TPE;Lille;2023-10-01;2023-10-07
+C0160;Client fictif 0160;PME;Nantes;2023-10-01;2023-10-26
+C0161;Client fictif 0161;Grand compte;Toulouse;2023-10-01;2023-10-07
+C0162;Client fictif 0162;TPE;Paris;2023-10-01;2023-10-24
+C0163;Client fictif 0163;PME;Lyon;2023-10-01;2023-10-07
+C0164;Client fictif 0164;Grand compte;Bordeaux;2023-10-01;2023-10-16
+C0165;Client fictif 0165;TPE;Lille;2023-10-01;2023-10-03
+C0166;Client fictif 0166;PME;Nantes;2023-10-01;2023-10-04
+C0167;Client fictif 0167;Grand compte;Toulouse;2023-10-01;2023-10-31
+C0168;Client fictif 0168;TPE;Paris;2023-10-01;2023-10-29
+C0169;Client fictif 0169;PME;Lyon;2023-10-01;2023-10-16
+C0170;Client fictif 0170;Grand compte;Bordeaux;2023-10-01;2023-10-19
+C0171;Client fictif 0171;TPE;Lille;2023-10-01;2023-10-02
+C0172;Client fictif 0172;PME;Nantes;2023-10-01;2023-10-21
+C0173;Client fictif 0173;Grand compte;Toulouse;2023-10-01;2023-10-20
+C0174;Client fictif 0174;TPE;Paris;2023-10-01;2023-10-11
+C0175;Client fictif 0175;PME;Lyon;2023-10-01;2023-10-12
+C0176;Client fictif 0176;Grand compte;Bordeaux;2023-10-01;2023-10-01
+C0177;Client fictif 0177;TPE;Lille;2023-10-01;2023-10-01
+C0178;Client fictif 0178;PME;Nantes;2023-10-01;2023-10-20
+C0179;Client fictif 0179;Grand compte;Toulouse;2023-10-01;2023-10-27
+C0180;Client fictif 0180;TPE;Paris;2023-10-01;2023-10-08
+C0181;Client fictif 0181;PME;Lyon;2023-10-01;2023-10-12
+C0182;Client fictif 0182;Grand compte;Bordeaux;2023-10-01;2023-10-06
+C0183;Client fictif 0183;TPE;Lille;2023-10-01;2023-10-29
+C0184;Client fictif 0184;PME;Nantes;2023-10-01;2023-10-28
+C0185;Client fictif 0185;Grand compte;Toulouse;2023-10-01;2023-10-24
+C0186;Client fictif 0186;TPE;Paris;2023-10-01;2023-10-06
+C0187;Client fictif 0187;PME;Lyon;2023-10-01;2023-10-09
+C0188;Client fictif 0188;Grand compte;Bordeaux;2023-10-01;2023-10-28
+C0189;Client fictif 0189;TPE;Lille;2023-10-01;2023-10-02
+C0190;Client fictif 0190;PME;Nantes;2023-10-01;2023-10-28
+C0191;Client fictif 0191;Grand compte;Toulouse;2023-10-01;2023-10-10
+C0192;Client fictif 0192;TPE;Paris;2023-10-01;2023-10-26
+C0193;Client fictif 0193;PME;Lyon;2023-10-01;2023-10-04
+C0194;Client fictif 0194;Grand compte;Bordeaux;2023-10-01;2023-10-28
+C0195;Client fictif 0195;TPE;Lille;2023-10-01;2023-10-08
+C0196;Client fictif 0196;PME;Nantes;2023-10-01;2023-10-16
+C0197;Client fictif 0197;Grand compte;Toulouse;2023-10-01;2023-10-16
+C0198;Client fictif 0198;TPE;Paris;2023-10-01;2023-10-26
+C0199;Client fictif 0199;PME;Lyon;2023-10-01;2023-10-24
+C0200;Client fictif 0200;Grand compte;Bordeaux;2023-10-01;2023-10-01
+C0201;Client fictif 0201;TPE;Lille;2023-10-01;2023-10-12
+C0202;Client fictif 0202;PME;Nantes;2023-10-01;2023-10-07
+C0203;Client fictif 0203;Grand compte;Toulouse;2023-10-01;2023-10-26
+C0204;Client fictif 0204;TPE;Paris;2023-10-01;2023-10-29
+C0205;Client fictif 0205;PME;Lyon;2023-10-01;2023-10-02
+C0206;Client fictif 0206;Grand compte;Bordeaux;2023-10-01;2023-10-04
+C0207;Client fictif 0207;TPE;Lille;2023-10-01;2023-10-16
+C0208;Client fictif 0208;PME;Nantes;2023-10-01;2023-10-05
+C0209;Client fictif 0209;Grand compte;Toulouse;2023-10-01;2023-10-26
+C0210;Client fictif 0210;TPE;Paris;2023-10-01;2023-11-07
+C0211;Client fictif 0211;PME;Lyon;2023-10-01;2023-11-20
+C0212;Client fictif 0212;Grand compte;Bordeaux;2023-10-01;2023-11-12
+C0213;Client fictif 0213;TPE;Lille;2023-10-01;2023-11-25
+C0214;Client fictif 0214;PME;Nantes;2023-10-01;2023-11-21
+C0215;Client fictif 0215;Grand compte;Toulouse;2023-10-01;2023-11-21
+C0216;Client fictif 0216;TPE;Paris;2023-10-01;2023-11-29
+C0217;Client fictif 0217;PME;Lyon;2023-10-01;2023-11-07
+C0218;Client fictif 0218;Grand compte;Bordeaux;2023-10-01;2023-11-15
+C0219;Client fictif 0219;TPE;Lille;2023-10-01;2023-11-08
+C0220;Client fictif 0220;PME;Nantes;2023-10-01;2023-11-15
+C0221;Client fictif 0221;Grand compte;Toulouse;2023-10-01;2023-11-23
+C0222;Client fictif 0222;TPE;Paris;2023-10-01;2023-11-02
+C0223;Client fictif 0223;PME;Lyon;2023-10-01;2023-11-29
+C0224;Client fictif 0224;Grand compte;Bordeaux;2023-10-01;2023-11-03
+C0225;Client fictif 0225;TPE;Lille;2023-10-01;2023-11-17
+C0226;Client fictif 0226;PME;Nantes;2023-10-01;2023-11-01
+C0227;Client fictif 0227;Grand compte;Toulouse;2023-10-01;2023-11-17
+C0228;Client fictif 0228;TPE;Paris;2023-10-01;2023-11-12
+C0229;Client fictif 0229;PME;Lyon;2023-10-01;2023-11-14
+C0230;Client fictif 0230;Grand compte;Bordeaux;2023-10-01;2023-11-06
+C0231;Client fictif 0231;TPE;Lille;2023-10-01;2023-11-19
+C0232;Client fictif 0232;PME;Nantes;2023-10-01;2023-11-21
+C0233;Client fictif 0233;Grand compte;Toulouse;2023-10-01;2023-11-14
+C0234;Client fictif 0234;TPE;Paris;2023-10-01;2023-11-07
+C0235;Client fictif 0235;PME;Lyon;2023-10-01;2023-11-05
+C0236;Client fictif 0236;Grand compte;Bordeaux;2023-10-01;2023-11-27
+C0237;Client fictif 0237;TPE;Lille;2023-10-01;2023-11-14
+C0238;Client fictif 0238;PME;Nantes;2023-10-01;2023-11-10
+C0239;Client fictif 0239;Grand compte;Toulouse;2023-10-01;2023-11-28
+C0240;Client fictif 0240;TPE;Paris;2023-10-01;2023-11-13
+C0241;Client fictif 0241;PME;Lyon;2023-10-01;2023-11-01
+C0242;Client fictif 0242;Grand compte;Bordeaux;2023-10-01;2023-11-08
+C0243;Client fictif 0243;TPE;Lille;2023-10-01;2023-11-27
+C0244;Client fictif 0244;PME;Nantes;2023-10-01;2023-11-05
+C0245;Client fictif 0245;Grand compte;Toulouse;2023-10-01;2023-11-08
+C0246;Client fictif 0246;TPE;Paris;2023-10-01;2023-11-07
+C0247;Client fictif 0247;PME;Lyon;2023-10-01;2023-11-10
+C0248;Client fictif 0248;Grand compte;Bordeaux;2023-10-01;2023-11-13
+C0249;Client fictif 0249;TPE;Lille;2023-10-01;2023-11-11
+C0250;Client fictif 0250;PME;Nantes;2023-10-01;2023-11-15
+C0251;Client fictif 0251;Grand compte;Toulouse;2023-10-01;2023-11-29
+C0252;Client fictif 0252;TPE;Paris;2023-10-01;2023-11-04
+C0253;Client fictif 0253;PME;Lyon;2023-10-01;2023-11-28
+C0254;Client fictif 0254;Grand compte;Bordeaux;2023-10-01;2023-11-29
+C0255;Client fictif 0255;TPE;Lille;2023-10-01;2023-11-14
+C0256;Client fictif 0256;PME;Nantes;2023-10-01;2023-11-29
+C0257;Client fictif 0257;Grand compte;Toulouse;2023-10-01;2023-11-28
+C0258;Client fictif 0258;TPE;Paris;2023-10-01;2023-11-09
+C0259;Client fictif 0259;PME;Lyon;2023-10-01;2023-11-25
+C0260;Client fictif 0260;Grand compte;Bordeaux;2023-10-01;2023-11-19
+C0261;Client fictif 0261;TPE;Lille;2023-10-01;2023-11-08
+C0262;Client fictif 0262;PME;Nantes;2023-10-01;2023-11-04
+C0263;Client fictif 0263;Grand compte;Toulouse;2023-10-01;2023-11-06
+C0264;Client fictif 0264;TPE;Paris;2023-10-01;2023-11-25
+C0265;Client fictif 0265;PME;Lyon;2023-10-01;2023-11-17
+C0266;Client fictif 0266;Grand compte;Bordeaux;2023-10-01;2023-11-26
+C0267;Client fictif 0267;TPE;Lille;2023-10-01;2023-11-22
+C0268;Client fictif 0268;PME;Nantes;2023-10-01;2023-11-28
+C0269;Client fictif 0269;Grand compte;Toulouse;2023-10-01;2023-11-14
+C0270;Client fictif 0270;TPE;Paris;2023-10-01;2023-11-25
+C0271;Client fictif 0271;PME;Lyon;2023-10-01;2023-11-04
+C0272;Client fictif 0272;Grand compte;Bordeaux;2023-10-01;2023-11-19
+C0273;Client fictif 0273;TPE;Lille;2023-10-01;2023-11-12
+C0274;Client fictif 0274;PME;Nantes;2023-10-01;2023-11-10
+C0275;Client fictif 0275;Grand compte;Toulouse;2023-10-01;2023-11-27
+C0276;Client fictif 0276;TPE;Paris;2023-10-01;2023-11-27
+C0277;Client fictif 0277;PME;Lyon;2023-10-01;2023-11-30
+C0278;Client fictif 0278;Grand compte;Bordeaux;2023-10-01;2023-11-10
+C0279;Client fictif 0279;TPE;Lille;2023-10-01;2023-11-18
+C0280;Client fictif 0280;PME;Nantes;2023-10-01;2023-11-03
+C0281;Client fictif 0281;Grand compte;Toulouse;2023-10-01;2023-11-16
+C0282;Client fictif 0282;TPE;Paris;2023-10-01;2023-11-18
+C0283;Client fictif 0283;PME;Lyon;2023-10-01;2023-11-14
+C0284;Client fictif 0284;Grand compte;Bordeaux;2023-10-01;2023-11-11
+C0285;Client fictif 0285;TPE;Lille;2023-10-01;2023-11-19
+C0286;Client fictif 0286;PME;Nantes;2023-10-01;2023-11-25
+C0287;Client fictif 0287;Grand compte;Toulouse;2023-10-01;2023-11-13
+C0288;Client fictif 0288;TPE;Paris;2023-10-01;2023-11-21
+C0289;Client fictif 0289;PME;Lyon;2023-10-01;2023-11-15
+C0290;Client fictif 0290;Grand compte;Bordeaux;2023-10-01;2023-11-04
+C0291;Client fictif 0291;TPE;Lille;2023-10-01;2023-11-21
+C0292;Client fictif 0292;PME;Nantes;2023-10-01;2023-11-17
+C0293;Client fictif 0293;Grand compte;Toulouse;2023-10-01;2023-11-23
+C0294;Client fictif 0294;TPE;Paris;2023-10-01;2023-11-25
+C0295;Client fictif 0295;PME;Lyon;2023-10-01;2023-11-21
+C0296;Client fictif 0296;Grand compte;Bordeaux;2023-10-01;2023-11-14
+C0297;Client fictif 0297;TPE;Lille;2023-10-01;2023-11-05
+C0298;Client fictif 0298;PME;Nantes;2023-10-01;2023-11-26
+C0299;Client fictif 0299;Grand compte;Toulouse;2023-10-01;2023-11-01
+C0300;Client fictif 0300;TPE;Paris;2023-10-01;2023-11-30
+C0301;Client fictif 0301;PME;Lyon;2023-10-01;2023-11-02
+C0302;Client fictif 0302;Grand compte;Bordeaux;2023-10-01;2023-11-06
+C0303;Client fictif 0303;TPE;Lille;2023-10-01;2023-11-04
+C0304;Client fictif 0304;PME;Nantes;2023-10-01;2023-11-14
+C0305;Client fictif 0305;Grand compte;Toulouse;2023-10-01;2023-11-23
+C0306;Client fictif 0306;TPE;Paris;2023-10-01;2023-11-26
+C0307;Client fictif 0307;PME;Lyon;2023-10-01;2023-11-24
+C0308;Client fictif 0308;Grand compte;Bordeaux;2023-10-01;2023-11-19
+C0309;Client fictif 0309;TPE;Lille;2023-10-01;2023-11-01
+C0310;Client fictif 0310;PME;Nantes;2023-10-01;2023-11-22
+C0311;Client fictif 0311;Grand compte;Toulouse;2023-10-01;2023-11-07
+C0312;Client fictif 0312;TPE;Paris;2023-10-01;2023-11-14
+C0313;Client fictif 0313;PME;Lyon;2023-10-01;2023-11-22
+C0314;Client fictif 0314;Grand compte;Bordeaux;2023-10-01;2023-11-19
+C0315;Client fictif 0315;TPE;Lille;2023-10-01;2023-11-26
+C0316;Client fictif 0316;PME;Nantes;2023-10-01;2023-11-21
+C0317;Client fictif 0317;Grand compte;Toulouse;2023-10-01;2023-11-04
+C0318;Client fictif 0318;TPE;Paris;2023-10-01;2023-11-24
+C0319;Client fictif 0319;PME;Lyon;2023-10-01;2023-11-24
+C0320;Client fictif 0320;Grand compte;Bordeaux;2023-10-01;2023-11-16
+C0321;Client fictif 0321;TPE;Lille;2023-10-01;2023-11-02
+C0322;Client fictif 0322;PME;Nantes;2023-10-01;2023-11-22
+C0323;Client fictif 0323;Grand compte;Toulouse;2023-10-01;2023-11-28
+C0324;Client fictif 0324;TPE;Paris;2023-10-01;2023-11-08
+C0325;Client fictif 0325;PME;Lyon;2023-10-01;2023-11-12
+C0326;Client fictif 0326;Grand compte;Bordeaux;2023-10-01;2023-11-02
+C0327;Client fictif 0327;TPE;Lille;2023-10-01;2023-11-27
+C0328;Client fictif 0328;PME;Nantes;2023-10-01;2023-11-25
+C0329;Client fictif 0329;Grand compte;Toulouse;2023-10-01;2023-11-27
+C0330;Client fictif 0330;TPE;Paris;2023-10-01;2023-11-25
+C0331;Client fictif 0331;PME;Lyon;2023-10-01;2023-11-12
+C0332;Client fictif 0332;Grand compte;Bordeaux;2023-10-01;2023-11-25
+C0333;Client fictif 0333;TPE;Lille;2023-10-01;2023-11-17
+C0334;Client fictif 0334;PME;Nantes;2023-10-01;2023-11-27
+C0335;Client fictif 0335;Grand compte;Toulouse;2023-10-01;2023-11-20
+C0336;Client fictif 0336;TPE;Paris;2023-10-01;2023-11-03
+C0337;Client fictif 0337;PME;Lyon;2023-10-01;2023-11-29
+C0338;Client fictif 0338;Grand compte;Bordeaux;2023-10-01;2023-11-08
+C0339;Client fictif 0339;TPE;Lille;2023-10-01;2023-11-23
+C0340;Client fictif 0340;PME;Nantes;2023-10-01;2023-11-21
+C0341;Client fictif 0341;Grand compte;Toulouse;2023-10-01;2023-11-14
+C0342;Client fictif 0342;TPE;Paris;2023-10-01;2023-11-16
+C0343;Client fictif 0343;PME;Lyon;2023-10-01;2023-11-29
+C0344;Client fictif 0344;Grand compte;Bordeaux;2023-10-01;2023-11-01
+C0345;Client fictif 0345;TPE;Lille;2023-10-01;2023-11-01
+C0346;Client fictif 0346;PME;Nantes;2023-10-01;2023-11-09
+C0347;Client fictif 0347;Grand compte;Toulouse;2023-10-01;2023-11-30
+C0348;Client fictif 0348;TPE;Paris;2023-10-01;2023-11-16
+C0349;Client fictif 0349;PME;Lyon;2023-10-01;2023-11-11
+C0350;Client fictif 0350;Grand compte;Bordeaux;2023-10-01;2023-11-18
+C0351;Client fictif 0351;TPE;Lille;2023-10-01;2023-11-30
+C0352;Client fictif 0352;PME;Nantes;2023-10-01;2023-11-06
+C0353;Client fictif 0353;Grand compte;Toulouse;2023-10-01;2023-11-14
+C0354;Client fictif 0354;TPE;Paris;2023-10-01;2023-11-20
+C0355;Client fictif 0355;PME;Lyon;2023-10-01;2023-11-03
+C0356;Client fictif 0356;Grand compte;Bordeaux;2023-10-01;2023-11-07
+C0357;Client fictif 0357;TPE;Lille;2023-10-01;2023-11-21
+C0358;Client fictif 0358;PME;Nantes;2023-10-01;2023-11-15
+C0359;Client fictif 0359;Grand compte;Toulouse;2023-10-01;2023-11-05
+C0360;Client fictif 0360;TPE;Paris;2023-10-01;2023-11-26
+C0361;Client fictif 0361;PME;Lyon;2023-10-01;2023-11-09
+C0362;Client fictif 0362;Grand compte;Bordeaux;2023-10-01;2023-11-13
+C0363;Client fictif 0363;TPE;Lille;2023-10-01;2023-11-03
+C0364;Client fictif 0364;PME;Nantes;2023-10-01;2023-11-04
+C0365;Client fictif 0365;Grand compte;Toulouse;2023-10-01;2023-11-22
+C0366;Client fictif 0366;TPE;Paris;2023-10-01;2023-11-24
+C0367;Client fictif 0367;PME;Lyon;2023-10-01;2023-11-27
+C0368;Client fictif 0368;Grand compte;Bordeaux;2023-10-01;2023-11-13
+C0369;Client fictif 0369;TPE;Lille;2023-10-01;2023-11-02
+C0370;Client fictif 0370;PME;Nantes;2023-10-01;2023-11-17
+C0371;Client fictif 0371;Grand compte;Toulouse;2023-10-01;2023-11-29
+C0372;Client fictif 0372;TPE;Paris;2023-10-01;2023-11-20
+C0373;Client fictif 0373;PME;Lyon;2023-10-01;2023-11-16
+C0374;Client fictif 0374;Grand compte;Bordeaux;2023-10-01;2023-11-21
+C0375;Client fictif 0375;TPE;Lille;2023-10-01;2023-11-24
+C0376;Client fictif 0376;PME;Nantes;2023-10-01;2023-11-22
+C0377;Client fictif 0377;Grand compte;Toulouse;2023-10-01;2023-11-08
+C0378;Client fictif 0378;TPE;Paris;2023-10-01;2023-11-07
+C0379;Client fictif 0379;PME;Lyon;2023-10-01;2023-11-12
+C0380;Client fictif 0380;Grand compte;Bordeaux;2023-10-01;2023-11-01
+C0381;Client fictif 0381;TPE;Lille;2023-10-01;2023-11-30
+C0382;Client fictif 0382;PME;Nantes;2023-10-01;2023-11-22
+C0383;Client fictif 0383;Grand compte;Toulouse;2023-10-01;2023-11-26
+C0384;Client fictif 0384;TPE;Paris;2023-10-01;2023-11-12
+C0385;Client fictif 0385;PME;Lyon;2023-10-01;2023-11-16
+C0386;Client fictif 0386;Grand compte;Bordeaux;2023-10-01;2023-11-16
+C0387;Client fictif 0387;TPE;Lille;2023-10-01;2023-11-19
+C0388;Client fictif 0388;PME;Nantes;2023-10-01;2023-11-15
+C0389;Client fictif 0389;Grand compte;Toulouse;2023-10-01;2023-11-25
+C0390;Client fictif 0390;TPE;Paris;2023-10-01;2023-11-09
+C0391;Client fictif 0391;PME;Lyon;2023-10-01;2023-11-12
+C0392;Client fictif 0392;Grand compte;Bordeaux;2023-10-01;2023-11-05
+C0393;Client fictif 0393;TPE;Lille;2023-10-01;2023-11-27
+C0394;Client fictif 0394;PME;Nantes;2023-10-01;2023-11-12
+C0395;Client fictif 0395;Grand compte;Toulouse;2023-10-01;2023-11-19
+C0396;Client fictif 0396;TPE;Paris;2023-10-01;2023-11-09
+C0397;Client fictif 0397;PME;Lyon;2023-10-01;2023-11-04
+C0398;Client fictif 0398;Grand compte;Bordeaux;2023-10-01;2023-11-21
+C0399;Client fictif 0399;TPE;Lille;2023-10-01;2023-11-17
+C0400;Client fictif 0400;PME;Nantes;2023-10-01;2023-11-08
+C0401;Client fictif 0401;Grand compte;Toulouse;2023-10-01;2023-11-02
+C0402;Client fictif 0402;TPE;Paris;2023-10-01;2023-11-19
+C0403;Client fictif 0403;PME;Lyon;2023-10-01;2023-11-21
+C0404;Client fictif 0404;Grand compte;Bordeaux;2023-10-01;2023-11-25
+C0405;Client fictif 0405;TPE;Lille;2023-10-01;2023-11-13
+C0406;Client fictif 0406;PME;Nantes;2023-10-01;2023-11-08
+C0407;Client fictif 0407;Grand compte;Toulouse;2023-10-01;2023-11-03
+C0408;Client fictif 0408;TPE;Paris;2023-10-01;2023-11-03
+C0409;Client fictif 0409;PME;Lyon;2023-10-01;2023-11-24
+C0410;Client fictif 0410;Grand compte;Bordeaux;2023-10-01;2023-11-11
+C0411;Client fictif 0411;TPE;Lille;2023-10-01;2023-11-19
+C0412;Client fictif 0412;PME;Nantes;2023-10-01;2023-11-21
+C0413;Client fictif 0413;Grand compte;Toulouse;2023-10-01;2023-11-26
+C0414;Client fictif 0414;TPE;Paris;2023-10-01;2023-11-04
+C0415;Client fictif 0415;PME;Lyon;2023-10-01;2023-11-11
+C0416;Client fictif 0416;Grand compte;Bordeaux;2023-10-01;2023-11-29
+C0417;Client fictif 0417;TPE;Lille;2023-10-01;2023-11-15
+C0418;Client fictif 0418;PME;Nantes;2023-10-01;2023-11-12
+C0419;Client fictif 0419;Grand compte;Toulouse;2023-10-01;2023-12-03
+C0420;Client fictif 0420;TPE;Paris;2023-10-01;2023-12-31
+C0421;Client fictif 0421;PME;Lyon;2023-10-01;2023-12-19
+C0422;Client fictif 0422;Grand compte;Bordeaux;2023-10-01;2023-12-16
+C0423;Client fictif 0423;TPE;Lille;2023-10-01;2023-12-19
+C0424;Client fictif 0424;PME;Nantes;2023-10-01;2023-12-09
+C0425;Client fictif 0425;Grand compte;Toulouse;2023-10-01;2023-12-24
+C0426;Client fictif 0426;TPE;Paris;2023-10-01;2023-12-25
+C0427;Client fictif 0427;PME;Lyon;2023-10-01;2023-12-12
+C0428;Client fictif 0428;Grand compte;Bordeaux;2023-10-01;2023-12-28
+C0429;Client fictif 0429;TPE;Lille;2023-10-01;2023-12-31
+C0430;Client fictif 0430;PME;Nantes;2023-10-01;2023-12-09
+C0431;Client fictif 0431;Grand compte;Toulouse;2023-10-01;2023-12-15
+C0432;Client fictif 0432;TPE;Paris;2023-10-01;2023-12-27
+C0433;Client fictif 0433;PME;Lyon;2023-10-01;2023-12-15
+C0434;Client fictif 0434;Grand compte;Bordeaux;2023-10-01;2023-12-06
+C0435;Client fictif 0435;TPE;Lille;2023-10-01;2023-12-10
+C0436;Client fictif 0436;PME;Nantes;2023-10-01;2023-12-05
+C0437;Client fictif 0437;Grand compte;Toulouse;2023-10-01;2023-12-28
+C0438;Client fictif 0438;TPE;Paris;2023-10-01;2023-12-31
+C0439;Client fictif 0439;PME;Lyon;2023-10-01;2023-12-29
+C0440;Client fictif 0440;Grand compte;Bordeaux;2023-10-01;2023-12-01
+C0441;Client fictif 0441;TPE;Lille;2023-10-01;2023-12-28
+C0442;Client fictif 0442;PME;Nantes;2023-10-01;2023-12-27
+C0443;Client fictif 0443;Grand compte;Toulouse;2023-10-01;2023-12-16
+C0444;Client fictif 0444;TPE;Paris;2023-10-01;2023-12-09
+C0445;Client fictif 0445;PME;Lyon;2023-10-01;2023-12-14
+C0446;Client fictif 0446;Grand compte;Bordeaux;2023-10-01;2023-12-05
+C0447;Client fictif 0447;TPE;Lille;2023-10-01;2023-12-08
+C0448;Client fictif 0448;PME;Nantes;2023-10-01;2023-12-30
+C0449;Client fictif 0449;Grand compte;Toulouse;2023-10-01;2023-12-17
+C0450;Client fictif 0450;TPE;Paris;2023-10-01;2023-12-14
+C0451;Client fictif 0451;PME;Lyon;2023-10-01;2023-12-18
+C0452;Client fictif 0452;Grand compte;Bordeaux;2023-10-01;2023-12-04
+C0453;Client fictif 0453;TPE;Lille;2023-10-01;2023-12-12
+C0454;Client fictif 0454;PME;Nantes;2023-10-01;2023-12-04
+C0455;Client fictif 0455;Grand compte;Toulouse;2023-10-01;2023-12-29
+C0456;Client fictif 0456;TPE;Paris;2023-10-01;2023-12-21
+C0457;Client fictif 0457;PME;Lyon;2023-10-01;2023-12-24
+C0458;Client fictif 0458;Grand compte;Bordeaux;2023-10-01;2023-12-18
+C0459;Client fictif 0459;TPE;Lille;2023-10-01;2023-12-15
+C0460;Client fictif 0460;PME;Nantes;2023-10-01;2023-12-25
+C0461;Client fictif 0461;Grand compte;Toulouse;2023-10-01;2023-12-11
+C0462;Client fictif 0462;TPE;Paris;2023-10-01;2023-12-07
+C0463;Client fictif 0463;PME;Lyon;2023-10-01;2023-12-11
+C0464;Client fictif 0464;Grand compte;Bordeaux;2023-10-01;2023-12-21
+C0465;Client fictif 0465;TPE;Lille;2023-10-01;2023-12-31
+C0466;Client fictif 0466;PME;Nantes;2023-10-01;2023-12-19
+C0467;Client fictif 0467;Grand compte;Toulouse;2023-10-01;2023-12-15
+C0468;Client fictif 0468;TPE;Paris;2023-10-01;2023-12-26
+C0469;Client fictif 0469;PME;Lyon;2023-10-01;2023-12-15
+C0470;Client fictif 0470;Grand compte;Bordeaux;2023-10-01;2023-12-06
+C0471;Client fictif 0471;TPE;Lille;2023-10-01;2023-12-28
+C0472;Client fictif 0472;PME;Nantes;2023-10-01;2023-12-23
+C0473;Client fictif 0473;Grand compte;Toulouse;2023-10-01;2023-12-23
+C0474;Client fictif 0474;TPE;Paris;2023-10-01;2023-12-17
+C0475;Client fictif 0475;PME;Lyon;2023-10-01;2023-12-11
+C0476;Client fictif 0476;Grand compte;Bordeaux;2023-10-01;2023-12-11
+C0477;Client fictif 0477;TPE;Lille;2023-10-01;2023-12-30
+C0478;Client fictif 0478;PME;Nantes;2023-10-01;2023-12-10
+C0479;Client fictif 0479;Grand compte;Toulouse;2023-10-01;2023-12-20
+C0480;Client fictif 0480;TPE;Paris;2023-10-01;2023-12-30
+C0481;Client fictif 0481;PME;Lyon;2023-10-01;2023-12-15
+C0482;Client fictif 0482;Grand compte;Bordeaux;2023-10-01;2023-12-02
+C0483;Client fictif 0483;TPE;Lille;2023-10-01;2023-12-15
+C0484;Client fictif 0484;PME;Nantes;2023-10-01;2023-12-28
+C0485;Client fictif 0485;Grand compte;Toulouse;2023-10-01;2023-12-25
+C0486;Client fictif 0486;TPE;Paris;2023-10-01;2023-12-09
+C0487;Client fictif 0487;PME;Lyon;2023-10-01;2023-12-09
+C0488;Client fictif 0488;Grand compte;Bordeaux;2023-10-01;2023-12-16
+C0489;Client fictif 0489;TPE;Lille;2023-10-01;2023-12-05
+C0490;Client fictif 0490;PME;Nantes;2023-10-01;2023-12-31
+C0491;Client fictif 0491;Grand compte;Toulouse;2023-10-01;2023-12-12
+C0492;Client fictif 0492;TPE;Paris;2023-10-01;2023-12-02
+C0493;Client fictif 0493;PME;Lyon;2023-10-01;2023-12-09
+C0494;Client fictif 0494;Grand compte;Bordeaux;2023-10-01;2023-12-23
+C0495;Client fictif 0495;TPE;Lille;2023-10-01;2023-12-05
+C0496;Client fictif 0496;PME;Nantes;2023-10-01;2023-12-27
+C0497;Client fictif 0497;Grand compte;Toulouse;2023-10-01;2023-12-05
+C0498;Client fictif 0498;TPE;Paris;2023-10-01;2023-12-02
+C0499;Client fictif 0499;PME;Lyon;2023-10-01;2023-12-09
+C0500;Client fictif 0500;Grand compte;Bordeaux;2023-10-01;2023-12-30
