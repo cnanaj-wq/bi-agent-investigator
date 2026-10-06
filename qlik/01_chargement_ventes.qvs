@@ -1,0 +1,90 @@
+// BI Agent Investigator — etape 1 : ventes uniquement.
+// Donnees fictives. Non execute dans Qlik a ce stade.
+// Remplacer le bloc VENTES existant ; ne pas l'ajouter une deuxieme fois.
+// Connexion Web requise : GITHUB_BI_AGENT_VENTES.
+// Les autres tables (retours, objectifs, dimensions) seront ajoutees ensuite.
+
+SET DecimalSep='.';
+SET ThousandSep=' ';
+SET DateFormat='YYYY-MM-DD';
+NullAsNull *;
+
+// 1. Lecture source. Pas de DISTINCT ici : compter les doublons bruts.
+VENTES_BRUTES:
+LOAD
+    LigneID, CommandeID, DateVente, ClientID, ProduitID,
+    CommercialID, Canal, Devise, Quantite, PrixCatalogueHT,
+    RemiseHT, CoutUnitaireHistoriqueHT, CAFactureHT, CoutVenduHT
+FROM [lib://GITHUB_BI_AGENT_VENTES]
+(txt, utf8, embedded labels, delimiter is ';');
+
+LET vLignesBrutes = NoOfRows('VENTES_BRUTES');
+
+// 2. Retirer uniquement les lignes identiques sur TOUS les champs.
+// Une meme LigneID avec des valeurs differentes reste detectee plus bas.
+VENTES_UNIQUES:
+NoConcatenate
+LOAD DISTINCT *
+RESIDENT VENTES_BRUTES;
+
+LET vLignesUniques = NoOfRows('VENTES_UNIQUES');
+LET vDoublonsExacts = $(vLignesBrutes) - $(vLignesUniques);
+DROP TABLE VENTES_BRUTES;
+
+// 3. Interpreter les nombres a point decimal et les dates ISO.
+// Les couts vides restent NULL ; aucune imputation a zero.
+VENTES:
+NoConcatenate
+LOAD
+    *,
+    If(IsNull(CoutVenduHT) or IsNull(CoutUnitaireHistoriqueHT),
+        1, 0) as FlagCoutManquant,
+    If(CommercialID='NON_RENSEIGNE', 1, 0) as FlagCommercialManquant,
+    If(IsNull(DateVente), 1, 0) as FlagDateInvalide;
+LOAD
+    Text(LigneID) as LigneID,
+    Text(CommandeID) as CommandeID,
+    Date(Date#(DateVente, 'YYYY-MM-DD')) as DateVente,
+    Text(ClientID) as ClientID,
+    Text(ProduitID) as ProduitID,
+    If(Len(Trim(CommercialID))>0,
+        Trim(CommercialID), 'NON_RENSEIGNE') as CommercialID,
+    Canal,
+    Devise,
+    Num#(Quantite, '0', '.', ' ') as Quantite,
+    Num#(PrixCatalogueHT, '0.00', '.', ' ') as PrixCatalogueHT,
+    Num#(RemiseHT, '0.00', '.', ' ') as RemiseHT,
+    If(Len(Trim(CoutUnitaireHistoriqueHT))>0,
+        Num#(CoutUnitaireHistoriqueHT, '0.00', '.', ' '),
+        Null()) as CoutUnitaireHistoriqueHT,
+    Num#(CAFactureHT, '0.00', '.', ' ') as CAFactureHT,
+    If(Len(Trim(CoutVenduHT))>0,
+        Num#(CoutVenduHT, '0.00', '.', ' '),
+        Null()) as CoutVenduHT
+RESIDENT VENTES_UNIQUES;
+
+DROP TABLE VENTES_UNIQUES;
+
+// 4. Audit au rechargement, volontairement non associe aux ventes.
+// Ne pas interpreter ces compteurs globaux comme des KPI filtres.
+AUDIT_CHARGEMENT:
+LOAD
+    Timestamp(Now(1)) as Audit_Horodatage,
+    $(vLignesBrutes) as Audit_LignesSource,
+    $(vLignesUniques) as Audit_LignesConservees,
+    $(vDoublonsExacts) as Audit_DoublonsExactsRetires,
+    Count(DISTINCT LigneID) as Audit_LigneIDDistincts,
+    Count(LigneID)-Count(DISTINCT LigneID) as Audit_CollisionsCleRestantes,
+    Count(DISTINCT CommandeID) as Audit_Commandes,
+    Sum(FlagCoutManquant) as Audit_LignesCoutManquant,
+    Sum(FlagCommercialManquant) as Audit_LignesCommercialManquant,
+    Sum(FlagDateInvalide) as Audit_DatesInvalides
+RESIDENT VENTES;
+
+TRACE VENTES : $(vLignesBrutes) lignes source ; $(vLignesUniques) conservees ; $(vDoublonsExacts) doublons exacts retires;
+
+// Attendus pour le jeu v1 : 15001 source, 15000 conservees, 1 doublon,
+// 7500 commandes, 72 couts absents, 790 commerciaux absents,
+// 0 collision restante et 0 date invalide.
+// Important : Sum ignore les NULL. Une somme de marges connues n'est
+// PAS la marge totale. Aucune marge totale n'est publiee a cette etape.
